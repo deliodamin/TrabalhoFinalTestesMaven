@@ -1,0 +1,16 @@
+SeleniumIDE\verificaElementosAoIniciar.class
+page\BuscarSuportesPage.class
+page\MenuPage.class
+testcase\TestALogin.class
+testcase\TesteSair.class
+page\PendenciasPage.class
+SeleniumIDE\buscaTreinamentoPorNome.class
+page\LoginPage.class
+SeleniumIDE\verificaDisponibilideDeUsuario.class
+SeleniumIDE\totalDeSuportesPorUsuarioDelio.class
+common\TestCaseCommon.class
+SeleniumIDE\expandirSuportePendente.class
+page\HomePage.class
+page\TreinamentosPage.class
+testcase\TestBFull.class
+SeleniumIDE\verificaExistenciaDeGrafico.class

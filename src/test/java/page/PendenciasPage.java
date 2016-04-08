@@ -10,12 +10,13 @@ public class PendenciasPage extends HomePage{
 			
 		public PendenciasPage() {
 			
-			buttonPendecia =  TestCaseCommon.getDriver().findElement(By.xpath("//div[@id='view80079']/div[2]/div[2]/span"));
+			buttonPendecia =  TestCaseCommon.getDriver().findElement(By.xpath("//div[@id='view79963']/div[2]/div[2]/span"));
 			System.out.println("Expandiu suporte pendente");
 		}
 		
-		public String ExpandirTreinamentoPendente()  {
+		public boolean ExpandirTreinamentoPendente() throws InterruptedException  {
 			buttonPendecia.click();
-			return TestCaseCommon.getDriver().findElement(By.xpath("//form[@id='formMostraSuporte']/fieldset/fieldset/div/label")).getText();
+			System.out.println("Retorno expandir suporte");
+			return true;
 		}
 }

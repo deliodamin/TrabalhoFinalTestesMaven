@@ -1,9 +1,11 @@
 package testcase;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import java.util.ArrayList;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -13,6 +15,7 @@ import common.TestCaseCommon;
 
 public class TesteSair {
 	
+	private StringBuffer verificationErrors = new StringBuffer();
 	
 	@Before
 	public void setUp() throws Exception {
@@ -34,6 +37,18 @@ public class TesteSair {
 			System.out.println(RetornoDeObjetos.get(0));
 		    assertEquals("Sair", RetornoDeObjetos.get(0));
 		    SairApp.FecharBrowser();
-			TestCaseCommon.getDriver().quit();
 	  }
+	 
+	 @After
+		public void tearDown() throws Exception {
+
+
+			String verificationErrorString = verificationErrors.toString();
+			if (!"".equals(verificationErrorString)) {
+				fail(verificationErrorString);
+			}
+			TestCaseCommon.getDriver().close();
+		}
+	 
+	 
 }

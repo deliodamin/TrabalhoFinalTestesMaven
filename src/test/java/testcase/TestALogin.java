@@ -11,9 +11,9 @@ import page.LoginPage;
 
 import common.TestCaseCommon;
 
-public class TesteLogin {
+public class TestALogin {
 
-	public TesteLogin() {
+	public TestALogin() {
 		// TODO Auto-generated constructor stub
 	}
 	private StringBuffer verificationErrors = new StringBuffer();
@@ -24,16 +24,7 @@ public class TesteLogin {
 		TestCaseCommon.getDriver().get(TestCaseCommon.URL_BASE + "/");
 	}
 
-	@After
-	public void tearDown() throws Exception {
-
-
-		String verificationErrorString = verificationErrors.toString();
-		if (!"".equals(verificationErrorString)) {
-			fail(verificationErrorString);
-		}
-
-	}
+	
 
 	@Test
 	public void testLogin() throws Exception {
@@ -42,5 +33,15 @@ public class TesteLogin {
 		assertEquals("SCRM", loginPage.getTitle());
 		loginPage.Login("delio", "ADM66@*29");
 		
+	}
+	@After
+	public void tearDown() throws Exception {
+
+
+		String verificationErrorString = verificationErrors.toString();
+		if (!"".equals(verificationErrorString)) {
+			fail(verificationErrorString);
+		}
+		//TestCaseCommon.getDriver().quit();
 	}
 }

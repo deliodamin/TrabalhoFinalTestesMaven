@@ -22,7 +22,7 @@ public class BuscarSuportesPage {
 	
 	public String BuscarTreinamentoPorNomeDelio()  {
 		
-		    new Select(TestCaseCommon.getDriver().findElement(By.id("usuario"))).selectByVisibleText("Délio Livir da Silva Damin");
+		    new Select(TestCaseCommon.getDriver().findElement(By.id("usuario"))).selectByVisibleText("Daniel Link de Rosso");
 		    buttonPesquisar.click();
 		    return  ResultadoBusca.getText();
 	}
